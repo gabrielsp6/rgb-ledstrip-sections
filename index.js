@@ -18,6 +18,7 @@ const connectionString = 'http://192.168.0.103:80'
     six: [255,255,255],
   }
 
+
 document.querySelector('.triangle-one').addEventListener('click', function() {
     let currentColor = hexToRgb(document.getElementById('color-picker').value);
 
@@ -478,3 +479,4 @@ document.querySelector('.triangle-one').addEventListener('click', function() {
     .then(data => console.log(data))
     .catch(error => console.error(error));
   });
+

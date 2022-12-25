@@ -16,8 +16,12 @@
     background-color: rgb(255, 255, 255);
   }
 
+.toggle{
+  font-size: 14px;
+}
+
 button {
-    font-size: 16px;
+    font-size: 30px;
     font-weight: bold;
   
     color: #FFFFFF;
@@ -26,7 +30,7 @@ button {
     border: none;
     border-radius: 3px;
   
-    padding: 10px 40px;
+    padding: 10px 10px;
     cursor: pointer;
     margin-bottom: 10px;
   }
