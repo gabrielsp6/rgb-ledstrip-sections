@@ -40,3 +40,88 @@ document.querySelector('.triangle').addEventListener('click', function() {
     .then(data => console.log(data))
     .catch(error => console.error(error));
   });
+
+  document.querySelector('#reset').addEventListener('click', function() {
+
+    let requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          seg: [
+            {
+              start: 0,
+              stop: 9,
+        
+              col:[
+                  [255, 255, 255, 255],
+                [255, 255, 255, 255],
+                [255, 255, 255, 255]
+              ] ,
+              brightness: 255
+            },
+                {
+              start: 9,
+              stop: 18,
+        
+              col:[
+                  [255, 255, 255, 255],
+                [255, 255, 255, 255],
+                [255, 255, 255, 255]
+              ] ,
+              brightness: 255
+            },
+                    {
+              start: 18,
+              stop: 27,
+        
+              col:[
+                  [255, 255, 255, 255],
+                [255, 255, 255, 255],
+                [255, 255, 255, 255]
+              ] ,
+              brightness: 255
+            },
+                    {
+              start: 27,
+              stop: 36,
+        
+              col:[
+                  [255, 255, 255, 255],
+                [255, 255, 255, 255],
+                [255, 255, 255, 255]
+              ] ,
+              brightness: 255
+            },
+                    {
+              start: 36,
+              stop: 45,
+        
+              col:[
+                  [255, 255, 255, 255],
+                [255, 255, 255, 255],
+                [255, 255, 255, 255]
+              ] ,
+              brightness: 255
+            }
+         ,
+                    {
+              start: 45,
+              stop: 53,
+        
+              col:[
+                  [255, 255, 255, 255],
+                [255, 255, 255, 255],
+                [255, 255, 255, 255]
+              ] ,
+              brightness: 255
+            }
+                  
+          ]
+        })
+      };
+
+    fetch(`${connectionString}/json/state`, requestOptions)
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+  });
